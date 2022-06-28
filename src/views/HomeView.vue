@@ -1,9 +1,18 @@
 <script setup>
-import TheWelcome from '@/components/TheWelcome.vue'
+import SearchBar from '../components/my-components/searchBar.vue';
+import PanelIndex from '../components/my-components/panelIndex.vue';
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <SearchBar></SearchBar>
+    <PanelIndex></PanelIndex>
   </main>
 </template>
+
+<style lang="css" scoped>
+    main{
+      height: 70vh;
+    }
+    
+</style>

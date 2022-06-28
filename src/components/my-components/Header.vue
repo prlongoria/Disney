@@ -8,8 +8,16 @@ export default {
 
 <template>
 
-<h1>Hola</h1>
-  
+<header class="indexHeader">
+      <img class="logo" />
+      <h1>wall-API</h1>
+      <nav>
+        <RouterLink to="/">Inicio</RouterLink>
+        <RouterLink to="/Favoritos">Favoritos</RouterLink>
+      </nav>
+      
+    </header>
+  <router-view></router-view>
 </template>
 
 <style>
