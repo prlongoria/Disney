@@ -10,9 +10,13 @@ export default {
         
     </div>
 </template>
-<style lang="css">
+
+<style lang="css" scoped>
     .panelFav{
-        height: 40vh;
-        border: 1px solid blue;
+        width: 47vw;
+        height: 75vh;        
+        background-color: white;
+        margin-top: 4vh;
+        
     }
 </style>

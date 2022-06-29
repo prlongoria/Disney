@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import FavoritosVue from '../views/Favoritos.vue'
+import FavoritosView from '../views/FavoritosView.vue'
 import HomeViewVue from '../views/HomeView.vue'
 
 const router = createRouter({
@@ -11,9 +11,11 @@ const router = createRouter({
       component: HomeViewVue
     },
     {
-      path:'/Favoritos',
-      name:'Favoritos',
-      component: FavoritosVue
+      path:'/FavoritosView',
+      name:'FavoritosView',
+      component: FavoritosView
+
+
       
     }
     

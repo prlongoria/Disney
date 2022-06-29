@@ -13,7 +13,7 @@ export default {
       <h1>wall-API</h1>
       <nav>
         <RouterLink to="/">Inicio</RouterLink>
-        <RouterLink to="/Favoritos">Favoritos</RouterLink>
+        <RouterLink to="/FavoritosView">Favoritos</RouterLink>
       </nav>
       
     </header>
