@@ -5,17 +5,22 @@ export default {
 
 }
 </script>
-
 <template>
-    <img src="/src/images/buscar.png" alt="lupa de búsqueda" type= "button" id="searchLoupe">
-  
+    <div>
+        <button type="button"><img src="../../images/buscar.png" alt="boton de buscar"></button>
+    </div>
 </template>
-
 <style lang="css" scoped>
-    #searchLoupe {
-        width: 3vw;
-        height: 4vh;
-    }
-
-
+   
+img {
+    width: 2vw;
+}
+button {
+    background-color:#A8BBC9;
+    border: transparent;
+    float: right;
+    margin-right: 5vw;
+    margin-top: 1vh;
+}
+    
 </style>

@@ -29,12 +29,13 @@ export default {
     }
 
     #createBoot {
-        width: 13vw;
-        height: 30vh;
-        margin-left: 3vw;
+        
+        height: 20vh;
+        margin-left: 6vw;
     }
     .textBox {
-        color: #363D42;
+    
+        
         background-color: white;
         width: 20vw;
         height: 4vh;
@@ -44,6 +45,9 @@ export default {
         margin-top: -6vh;
         border-radius: 10px;
         
+    }
+    .textBox p{
+        color: #363D42;
     }
 
     
