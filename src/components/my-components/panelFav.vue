@@ -13,8 +13,8 @@ export default {
 
 <style lang="css" scoped>
     .panelFav{
-        width: 47vw;
-        height: 75vh;        
+        width: 45vw;
+        height: 55vh;        
         background-color: white;
         margin-top: 4vh;
         

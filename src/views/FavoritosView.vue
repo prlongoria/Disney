@@ -37,11 +37,13 @@ export default {
         padding: 5%;
         display: flex;
         justify-content: space-between;
+        height: 80vh;
+
         
     }
     #evaFavoritos {
-        width: 35vw;
-        height: 90vh;
+        
+        height: 70vh;
 
     }
     #search {

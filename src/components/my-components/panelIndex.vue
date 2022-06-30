@@ -10,10 +10,8 @@ export default {
 </template>
 <style lang="css" scoped>
     .indexPanel{
-        height: 60vh;
-        width: 35vw;
-        float: right;
-        margin-right: 5vw;
-        border: 1px solid pink;
+        height: 55vh;
+        width: 45vw;
+        background-color: white;
     }
 </style>
