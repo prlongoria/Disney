@@ -1,14 +1,15 @@
 
 <script>
-import Card from './card.vue';
+import CardFav from './cardFav.vue';
 export default {
-    components: { Card }
+    components: { CardFav }
+
 }
 </script>
 
 <template>
     <div class="panelFav">
-       <Card></Card> 
+       <CardFav></CardFav> 
     </div>
 </template>
 
@@ -18,6 +19,6 @@ export default {
         height: 55vh;        
         background-color: white;
         margin-top: 4vh;
-        
+        overflow: scroll; /*auto también sirve*/
     }
 </style>

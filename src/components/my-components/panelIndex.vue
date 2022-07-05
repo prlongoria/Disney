@@ -6,6 +6,7 @@ export default {
 </script>
 <template >
     <div class="indexPanel">
+        
     </div>
 </template>
 <style lang="css" scoped>
