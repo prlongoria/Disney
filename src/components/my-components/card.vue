@@ -46,15 +46,18 @@
     background-color:#39C1CD;
     display: flex;
     justify-content: center;
+    padding: 1vh;
+    margin: 1.5vh;
+    
 }
 .cardButtons{
     display: flex;
     flex-direction:column;
+    justify-content: center;
 }
 .cardtext{
     width:35vw;
     height: 18vh;
-    background-color: wheat;
     line-height: 1px;
     
 }
@@ -64,6 +67,10 @@
     flex-direction: column;
     align-items: center;
 }
+button {
+    background-color: transparent;
+    border: none;
+}
 #deleteImg, #editImg{
     width: 2vw;
 
@@ -71,6 +78,7 @@
 
 .stars img{
     width:1vw;
+    margin-top: 1vh;
     
 }
 #characterImg{
