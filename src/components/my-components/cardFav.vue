@@ -14,6 +14,26 @@ export default {
                 return disneyFavorites
             })
     },
+    props: {
+
+    }
+
+}
+
+function changeFirstStar() {
+
+    document.getElementById("star-grey").src == "img/star-grey.png"
+    document.getElementById("star-grey").src = "img/star-yellow.png";
+}
+function changeSecondStar() {
+
+    document.getElementById("star-grey2").src == "img/star-grey.png"
+    document.getElementById("star-grey2").src = "img/star-yellow.png";
+}
+function changeThirdStar() {
+
+    document.getElementById("star-grey3").src == "img/star-grey.png"
+    document.getElementById("star-grey3").src = "img/star-yellow.png";
 }
 
 </script>
@@ -31,9 +51,12 @@ export default {
                 id="characterImg"
             />
             <div class="stars">
-                <img src="../../images/star-grey.png" id="star1" />
-                <img src="../../images/star-grey.png" id="star2" />
-                <img src="../../images/star-grey.png" id="star3" />
+            <img alt="" src="/img/star-grey.png" 
+        style="height: 6vh; width: 4vw" id="star-grey" onclick="changeFirstStar()"/>
+        <img alt="" src="/img/star-grey.png" 
+        style="height: 6vh; width: 4vw" id="star-grey2" onclick="changeSecondStar()"/>
+        <img alt="" src="/img/star-grey.png" 
+        style="height: 6vh; width: 4vw" id="star-grey3" onclick="changeThirdStar()"/>
             </div>
         </div>
         <div class="cardtext">
@@ -57,7 +80,7 @@ export default {
     
 </template>
 
-<style>
+<style lang="css" scoped>
 .cardBox {
     background-color: #39c1cd;
     display: flex;

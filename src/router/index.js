@@ -15,9 +15,8 @@ const router = createRouter({
       name:'FavoritosView',
       component: FavoritosView
 
-
-      
     }
+
     
   ]
 })
