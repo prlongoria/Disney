@@ -1,7 +1,13 @@
 <script>
+    import { listfavouritescreated } from '../../stores/favdisney';  
+    import { computed } from 'vue';
     export default{
+        setup() {
+   // store
+   const listfav = listfavouritescreated();
 
     }
+}
 </script>
 <template>
     <div class="cardBox">
@@ -14,7 +20,7 @@
              </div>
         </div>
          <div class="cardtext">
-            <h5 id="name">Name: </h5> 
+            <h5 id="name">Name: {{ listfav }}</h5> 
             <p id="nameData"></p>
             <h5 id="film">Film or Show: </h5>
             <p id="filmData"></p>
