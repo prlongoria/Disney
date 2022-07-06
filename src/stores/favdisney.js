@@ -1,5 +1,5 @@
-import { listfavouritescreated } from 'pinia'
-import { prependListener } from 'process'
+import { defineStore } from 'pinia'
+//import { prependListener } from 'process'
 
 export const listfavouritescreated = defineStore({
   id: 'listfav',
@@ -11,7 +11,7 @@ export const listfavouritescreated = defineStore({
     doubleCount: (state) => state.counter * 2
   },
   actions: {
-    increment() {
+      addfav() {
       this.counter++
     }
   }

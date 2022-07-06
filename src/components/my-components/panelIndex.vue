@@ -15,9 +15,7 @@ export default {
             this.disneyCaracters = data.data;
         })      
     },
-    /*function addFavorites(name) { 
-        let indexOfName = disneyCaracters.indexOf(name)
-    }*/
+
 
 }
  
@@ -41,7 +39,7 @@ export default {
                 <p id="enemiesData" v-else>{{caracter.enemies}}</p>
             </div> 
              <div class="cardButtons">
-                <button id="addFav" v-on:click="addFavorites(caracter.name)">
+                <button id="addFav" @click="addfav">
                 <img src="../../images/mickey-fav-grey.png" id="addImg"/>
                 </button>
                 

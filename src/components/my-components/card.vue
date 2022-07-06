@@ -1,13 +1,17 @@
 <script>
     import { listfavouritescreated } from '../../stores/favdisney';  
-    import { computed } from 'vue';
+    import { mapState, mapActions } from 'pinia';
     export default{
-        setup() {
-   // store
-   const listfav = listfavouritescreated();
+        computed:{
+            ...mapState (listfavouritescreated,{
+                name: 'favname'
+            })},
+        methods:{
+            ...mapActions(listfavouritescreated,['addfav'])
+        },
 
     }
-}
+
 </script>
 <template>
     <div class="cardBox">
@@ -20,7 +24,7 @@
              </div>
         </div>
          <div class="cardtext">
-            <h5 id="name">Name: {{ listfav }}</h5> 
+            <h5 id="name">Name: {{ name }} </h5> 
             <p id="nameData"></p>
             <h5 id="film">Film or Show: </h5>
             <p id="filmData"></p>
