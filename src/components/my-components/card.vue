@@ -2,15 +2,35 @@
     export default{
 
     }
+
+    function changeFirstStar() {
+
+    document.getElementById("star-grey").src == "/src/images/star-grey.png";
+    document.getElementById("star-grey").src = "/src/images/star-yellow.png";;
+}
+function changeSecondStar() {
+
+    document.getElementById("star-grey2").src == "/src/images/star-grey.png";
+    document.getElementById("star-grey2").src = "/src/images/star-yellow.png";
+}
+function changeThirdStar() {
+
+    document.getElementById("star-grey3").src == "/src/images/star-grey.png";
+    document.getElementById("star-grey3").src = "/src/images/star-yellow.png";
+}
+
 </script>
 <template>
     <div class="cardBox">
         <div id="photo">
              <img src="https://static.wikia.nocookie.net/disney/images/f/fa/Normal_EoA_S3_E4_0217.jpg" id="characterImg"/>
              <div class="stars">
-                <img src="\src\images\star-grey.png" id="star1"/>
-                <img src="\src\images\star-grey.png" id="star2"/>
-                <img src="\src\images\star-grey.png" id="star3"/>
+                <img alt="" src="/src/images/star-grey.png" 
+        style="height: 3vh; width: 1.5vw" id="star-grey" onclick="changeFirstStar()"/>
+        <img alt="" src="/src/images/star-grey.png"   
+        style="height: 3vh; width: 1.5vw" id="star-grey2" onclick="changeSecondStar()"/>
+        <img alt="" src="/src/images/star-grey.png" 
+        style="height: 3vh; width: 1.5vw" id="star-grey3" onclick="changeThirdStar()"/>
              </div>
         </div>
          <div class="cardtext">
