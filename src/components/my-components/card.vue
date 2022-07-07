@@ -52,7 +52,7 @@
     justify-content: center;
     padding: 1vh;
     margin: 1.5vh;
-    
+    overflow-y: scroll;
 }
 .cardButtons{
     display: flex;

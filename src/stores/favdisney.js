@@ -12,7 +12,7 @@ export const listfavouritescreated = defineStore({
   },
   actions: {
       addfav() {
-      this.counter++
+      this.listfavouritescreated
     }
   }
 })
