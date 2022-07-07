@@ -4,7 +4,7 @@ import { defineStore } from 'pinia'
 export const listfavouritescreated = defineStore({
   id: 'listfav',
   state: () => ({
-    favname : "pepe",
+    favname: [],
     
   }),
   getters: {
@@ -12,7 +12,7 @@ export const listfavouritescreated = defineStore({
   },
   actions: {
       addfav() {
-      this.listfavouritescreated
+      this.listfavouritescreated.push(favname);
     }
   }
 })
