@@ -1,14 +1,10 @@
 <script>
-    import { listfavouritescreated } from '../../stores/favdisney';  
-    import { mapState, mapActions } from 'pinia';
+
     export default{
-        computed:{
-            ...mapState (listfavouritescreated,{
-                name: 'favname'
-            })},
-        methods:{
-            ...mapActions(listfavouritescreated,['addfav'])
-        },
+        props: {
+            character: Object,
+        }
+       
 
     }
 
@@ -16,7 +12,7 @@
 <template>
     <div class="cardBox">
         <div id="photo">
-             <img src="https://static.wikia.nocookie.net/disney/images/f/fa/Normal_EoA_S3_E4_0217.jpg" id="characterImg"/>
+             <img :src=character.imageUrl id="characterImg"/>
              <div class="stars">
                 <img src="\src\images\star-grey.png" id="star1"/>
                 <img src="\src\images\star-grey.png" id="star2"/>
@@ -24,13 +20,12 @@
              </div>
         </div>
          <div class="cardtext">
-            <h5 id="name">Name: {{ name }} </h5> 
-            <p id="nameData"></p>
-            <h5 id="film">Film or Show: </h5>
+            <h5 id="name">Name: {{ character.name }} </h5> 
+            <h5 id="film">Film or Show: {{character.films}}</h5>
             <p id="filmData"></p>
-            <h5 id="allies">Allies: </h5>
+            <h5 id="allies">Allies: {{character.allies}}</h5>
             <p id="alliesData"></p>
-            <h5 id="enemies">Enemies: </h5>
+            <h5 id="enemies">Enemies: {{character.enemies}}</h5>
             <p id="enemiesData"></p>
         </div>
         <div class="cardButtons">

@@ -1,14 +1,22 @@
 
 <script>
+import { mapWritableState } from 'pinia';
+import { favouriteList } from '../../stores/favdisney';
 import Card from './card.vue';
 export default {
-    components: { Card }
+    components: { Card },
+    computed:{
+    ...mapWritableState(favouriteList, ['charactersInFav'])
+    }
 }
 </script>
 
 <template>
-    <div class="panelFav">
-       <Card></Card> 
+    <div class="panelFav" > 
+        <div v-for="(character,key) in charactersInFav" :key="key">
+                   
+        <Card :character="character"></Card>
+        </div>
     </div>
 </template>
 

@@ -1,6 +1,6 @@
 <script setup>
 import SearchBar from '../components/my-components/searchBar.vue';
-import PanelIndex from '../components/my-components/panelIndex.vue';
+import panelIndexVue from '../components/my-components/panelIndex.vue';
 import WalleImagen from '../components/my-components/walleImagen.vue';
 import SearchButton from '../components/my-components/searchButton.vue';
 
@@ -13,13 +13,13 @@ import SearchButton from '../components/my-components/searchButton.vue';
     </div>
     <div>
 
-  
-    <div id="search2">
-    <SearchBar></SearchBar>
-    <SearchButton></SearchButton>
-    </div>
-    <PanelIndex></PanelIndex>
-  
+      
+        <div id="search2">
+          <SearchBar></SearchBar>
+          <SearchButton></SearchButton>
+        </div>
+          <panelIndexVue></panelIndexVue>
+      
     </div>
     
   </section>
