@@ -12,58 +12,48 @@ export default {
                 this.disneyCaracters = data.data
             })
     },
-    /*function addFavorites(name) { 
-        let indexOfName = disneyCaracters.indexOf(name)
-    }*/
+
+
 }
 </script>
 <template>
     <div class="indexPanel">
-        <div class="cardBox" v-for="caracter in disneyCaracters" :key="key">
-            <img
-                class="photo"
-                :src="caracter.imageUrl"
-                alt="Imagen del Personaje"
-             />
-
-            <div class="cardtext">
-                <h5 id="name">Name:</h5>
-                <p id="nameData">{{ caracter.name }}</p>
-                <h5 id="film">Film or Show:</h5>
-                <p id="filmData" v-if="caracter.films.length === 0">
-                    Desconocido
-                </p>
-                <p id="filmData" v-else>{{ caracter.films }}</p>
-                <h5 id="allies">Allies:</h5>
-                <p id="alliesData" v-if="caracter.allies.length === 0">
-                    Desconocido
-                </p>
-                <p id="alliesData" v-else>{{ caracter.allies }}</p>
-                <h5 id="enemies">Enemies:</h5>
-                <p id="enemiesData" v-if="caracter.enemies.length === 0">
-                    Desconocido
-                </p>
-                <p id="enemiesData" v-else>{{ caracter.enemies }}</p>
-            </div>
+        <div class="cardBox"  v-for="caracter in disneyCaracters" :key="key" >
+        <img class="photo" :src=caracter.imageUrl alt="Imagen del Personaje">
+    
+            <div class="cardtext">  
+                <h5 id="name">Name: {{caracter.name}} </h5> 
+                
+                
+                <h5 id="filmData" v-if = "caracter.films.length === 0 " >Film or show: Desconocido</h5>
+                <h5 id="filmData" v-else >Film or show: {{caracter.films}}</h5>
+                
+                <h5 id="alliesData" v-if = "caracter.allies.length === 0 " >Allies: Desconocido</h5>
+                <h5 id="alliesData" v-else>Allies: {{caracter.allies}}</h5>
+                
+                <h5 id="enemiesData" v-if = "caracter.enemies.length === 0 " >Enemies: Desconocido</h5>
+                <h5 id="enemiesData" v-else>Enemies: {{caracter.enemies}}</h5>
+            </div> 
             <div class="cardButtons">
-                <button id="addFav" v-on:click="addFavorites(caracter.name)">
-                    <img src="../../images/mickey-fav-grey.png" id="addImg" />
+                <button id="addFav" @click="addfav">
+                <img src="../../images/mickey-fav-grey.png" id="addImg"/>
                 </button>
             </div>
         </div>
     </div>
 </template>
 <style lang="css" scoped>
-.indexPanel {
-    max-height: 55vh;
-    overflow-y: scroll;
-    width: 45vw;
-    background-color: white;
-    color: pink;
-    padding: 1%;
-}
-.cardBox {
-    background-color: #39c1cd;
+    .indexPanel{
+        max-height: 55vh;
+        overflow-y: scroll;
+        width: 45vw;
+        background-color: white;
+        color: black;
+        padding: 1%;
+
+    }
+.cardBox{
+    background-color:#39C1CD;
     display: flex;
     justify-content: center;
     padding: 1vh;
@@ -76,15 +66,21 @@ export default {
     flex-direction: column;
     justify-content: center;
 }
-.cardtext {
-    width: 35vw;
-    height: 18vh;
+.cardtext{
+    width:35vw;
+    height: 18vh;  
+    line-height: 3vh;
+    color: black;    
+    font-size: 3vh;
+    padding: 1vw;
 }
-.photo {
+
+.photo{
     width: 8vw;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column;    
+    justify-content: center;
+    
 }
 
 button {

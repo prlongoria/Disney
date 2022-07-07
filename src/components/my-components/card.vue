@@ -1,23 +1,16 @@
 <script>
+    import { listfavouritescreated } from '../../stores/favdisney';  
+    import { mapState, mapActions } from 'pinia';
     export default{
+        computed:{
+            ...mapState (listfavouritescreated,{
+                name: 'favname'
+            })},
+        methods:{
+            ...mapActions(listfavouritescreated,['addfav'])
+        },
 
     }
-
-    function changeFirstStar() {
-
-    document.getElementById("star-grey").src == "/src/images/star-grey.png";
-    document.getElementById("star-grey").src = "/src/images/star-yellow.png";;
-}
-function changeSecondStar() {
-
-    document.getElementById("star-grey2").src == "/src/images/star-grey.png";
-    document.getElementById("star-grey2").src = "/src/images/star-yellow.png";
-}
-function changeThirdStar() {
-
-    document.getElementById("star-grey3").src == "/src/images/star-grey.png";
-    document.getElementById("star-grey3").src = "/src/images/star-yellow.png";
-}
 
 </script>
 <template>
@@ -34,7 +27,7 @@ function changeThirdStar() {
             </div>
         </div>
         <div class="cardtext">
-            <h5 id="name">Name: </h5> 
+            <h5 id="name">Name: {{ name }} </h5> 
             <p id="nameData"></p>
             <h5 id="film">Film or Show: </h5>
             <p id="filmData"></p>
@@ -62,7 +55,7 @@ function changeThirdStar() {
     justify-content: center;
     padding: 1vh;
     margin: 1.5vh;
-    
+    overflow-y: scroll;
 }
 .cardButtons{
     display: flex;

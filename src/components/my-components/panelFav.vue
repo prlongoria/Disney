@@ -18,6 +18,6 @@ export default {
         height: 55vh;        
         background-color: white;
         margin-top: 4vh;
-        
+        overflow-y: scroll;
     }
 </style>
