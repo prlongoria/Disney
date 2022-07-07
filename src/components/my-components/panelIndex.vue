@@ -1,6 +1,7 @@
 
 <script>
-
+import { mapState, mapActions } from 'pinia';
+import { favouriteList} from '../../stores/favdisney';
 
 export default {
     data() {
@@ -15,17 +16,20 @@ export default {
             this.disneyCaracters = data.data;
         })      
     },
-
-
+    computed:{
+        ...mapState(favouriteList, ['caracter'])},
+    methods:{
+            ...mapActions(favouriteList, ["addFavorites"])
+        }, 
+    
 }
  
 </script>
 <template >
     <div class="indexPanel">
-        <div class="cardBox"  v-for="caracter in disneyCaracters" :key="key" >
+        <div class="cardBox"  v-for="caracter in disneyCaracters" :key="caracter.id" >
            <img class="photo" :src=caracter.imageUrl alt="Imagen del Personaje">
-           
-            <div class="cardtext">  
+           <div class="cardtext">  
                 <h5 id="name">Name: </h5> 
                 <p id="nameData">{{caracter.name}}</p>
                 <h5 id="film" >Film or Show: </h5>
@@ -39,7 +43,7 @@ export default {
                 <p id="enemiesData" v-else>{{caracter.enemies}}</p>
             </div> 
              <div class="cardButtons">
-                <button id="addFav" @click="addfav">
+                <button id="addFav" @click="addFavorites(caracter)">
                 <img src="../../images/mickey-fav-grey.png" id="addImg"/>
                 </button>
                 

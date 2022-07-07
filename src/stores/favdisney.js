@@ -1,18 +1,17 @@
 import { defineStore } from 'pinia'
 //import { prependListener } from 'process'
 
-export const listfavouritescreated = defineStore({
+export const  favouriteList = defineStore({
   id: 'listfav',
   state: () => ({
-    favname : "pepe",
-    
+    charactersInFav:[]
+           
   }),
   getters: {
-    doubleCount: (state) => state.counter * 2
   },
   actions: {
-      addfav() {
-      this.counter++
+    addFavorites(caracterobject) {
+        this.charactersInFav.push(caracterobject)
     }
   }
 })
