@@ -1,68 +1,69 @@
-
 <script>
-
-
 export default {
     data() {
         return {
-            disneyCaracters : []
+            disneyCaracters: [],
         }
     },
     created() {
         fetch("https://api.disneyapi.dev/characters")
-        .then(response=>response.json())
-        .then(data=>{
-            this.disneyCaracters = data.data;
-        })      
+            .then((response) => response.json())
+            .then((data) => {
+                this.disneyCaracters = data.data
+            })
     },
     /*function addFavorites(name) { 
         let indexOfName = disneyCaracters.indexOf(name)
     }*/
-
 }
- 
 </script>
-<template >
+<template>
     <div class="indexPanel">
-        <div class="cardBox"  v-for="caracter in disneyCaracters" :key="key" >
-           <img class="photo" :src=caracter.imageUrl alt="Imagen del Personaje">
-           
-            <div class="cardtext">  
-                <h5 id="name">Name: </h5> 
-                <p id="nameData">{{caracter.name}}</p>
-                <h5 id="film" >Film or Show: </h5>
-                <p id="filmData" v-if = "caracter.films.length === 0 " >Desconocido</p>
-                <p id="filmData" v-else >{{caracter.films}}</p>
-                <h5 id="allies">Allies: </h5>
-                <p id="alliesData" v-if = "caracter.allies.length === 0 " >Desconocido</p>
-                <p id="alliesData" v-else>{{caracter.allies}}</p>
-                <h5 id="enemies">Enemies: </h5>
-                <p id="enemiesData" v-if = "caracter.enemies.length === 0 " >Desconocido</p>
-                <p id="enemiesData" v-else>{{caracter.enemies}}</p>
-            </div> 
-             <div class="cardButtons">
+        <div class="cardBox" v-for="caracter in disneyCaracters" :key="key">
+            <img
+                class="photo"
+                :src="caracter.imageUrl"
+                alt="Imagen del Personaje"
+             />
+
+            <div class="cardtext">
+                <h5 id="name">Name:</h5>
+                <p id="nameData">{{ caracter.name }}</p>
+                <h5 id="film">Film or Show:</h5>
+                <p id="filmData" v-if="caracter.films.length === 0">
+                    Desconocido
+                </p>
+                <p id="filmData" v-else>{{ caracter.films }}</p>
+                <h5 id="allies">Allies:</h5>
+                <p id="alliesData" v-if="caracter.allies.length === 0">
+                    Desconocido
+                </p>
+                <p id="alliesData" v-else>{{ caracter.allies }}</p>
+                <h5 id="enemies">Enemies:</h5>
+                <p id="enemiesData" v-if="caracter.enemies.length === 0">
+                    Desconocido
+                </p>
+                <p id="enemiesData" v-else>{{ caracter.enemies }}</p>
+            </div>
+            <div class="cardButtons">
                 <button id="addFav" v-on:click="addFavorites(caracter.name)">
-                <img src="../../images/mickey-fav-grey.png" id="addImg"/>
+                    <img src="../../images/mickey-fav-grey.png" id="addImg" />
                 </button>
-                
+            </div>
         </div>
-        </div>
-
     </div>
-
 </template>
 <style lang="css" scoped>
-    .indexPanel{
-        max-height: 55vh;
-        overflow-y: scroll;
-        width: 45vw;
-        background-color: white;
-        color: pink;
-        padding: 1%;
-
-    }
-.cardBox{
-    background-color:#39C1CD;
+.indexPanel {
+    max-height: 55vh;
+    overflow-y: scroll;
+    width: 45vw;
+    background-color: white;
+    color: pink;
+    padding: 1%;
+}
+.cardBox {
+    background-color: #39c1cd;
     display: flex;
     justify-content: center;
     padding: 1vh;
@@ -70,18 +71,16 @@ export default {
     overflow-y: scroll;
 }
 
-.cardButtons{
+.cardButtons {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: center;
 }
-.cardtext{
-    width:35vw;
+.cardtext {
+    width: 35vw;
     height: 18vh;
-  
-    
 }
-.photo{
+.photo {
     width: 8vw;
     display: flex;
     flex-direction: column;
@@ -92,21 +91,15 @@ button {
     background-color: transparent;
     border: none;
 }
-#addImg{
+#addImg {
     width: 2vw;
-
 }
 
-.stars img{
-    width:1vw;
+.stars img {
+    width: 1vw;
     margin-top: 1vh;
 }
-#characterImg{
+#characterImg {
     height: 15vh;
 }
 </style>
-
- 
-    
-
-

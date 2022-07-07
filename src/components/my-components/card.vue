@@ -23,17 +23,17 @@ function changeThirdStar() {
 <template>
     <div class="cardBox">
         <div id="photo">
-             <img src="https://static.wikia.nocookie.net/disney/images/f/fa/Normal_EoA_S3_E4_0217.jpg" id="characterImg"/>
-             <div class="stars">
+            <img src="https://static.wikia.nocookie.net/disney/images/f/fa/Normal_EoA_S3_E4_0217.jpg" id="characterImg"/>
+            <div class="stars">
                 <img alt="" src="/src/images/star-grey.png" 
         style="height: 3vh; width: 1.5vw" id="star-grey" onclick="changeFirstStar()"/>
         <img alt="" src="/src/images/star-grey.png"   
         style="height: 3vh; width: 1.5vw" id="star-grey2" onclick="changeSecondStar()"/>
         <img alt="" src="/src/images/star-grey.png" 
         style="height: 3vh; width: 1.5vw" id="star-grey3" onclick="changeThirdStar()"/>
-             </div>
+            </div>
         </div>
-         <div class="cardtext">
+        <div class="cardtext">
             <h5 id="name">Name: </h5> 
             <p id="nameData"></p>
             <h5 id="film">Film or Show: </h5>
