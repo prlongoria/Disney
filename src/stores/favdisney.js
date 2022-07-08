@@ -11,7 +11,8 @@ export const  favouriteList = defineStore({
   },
   actions: {
     addFavorites(caracterobject) {
-        this.charactersInFav.push(caracterobject)
+      
+        this.charactersInFav.push(caracterobject) 
     }
   }
 })
